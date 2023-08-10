@@ -15,6 +15,7 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "github/copilot.vim", branch = "release" })
 	use("tpope/vim-fugitive")
 	use("nvim-tree/nvim-tree.lua")
 	use("vim-test/vim-test")
