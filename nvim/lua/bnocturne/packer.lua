@@ -14,6 +14,7 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	use("ThePrimeagen/vim-be-good")
 	use({ "rose-pine/neovim", as = "rose-pine" })
 	use({ "github/copilot.vim", branch = "release" })
 	use("tpope/vim-fugitive")
@@ -29,12 +30,14 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("numToStr/Comment.nvim")
 	use("vim-scripts/ReplaceWithRegister")
+	use("github/copilot.vim")
+	--install some plugin
+
 	use("tpope/vim-surround")
 	use("mbbill/undotree")
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-
 	use("rcarriga/nvim-notify")
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use({
@@ -51,7 +54,9 @@ return require("packer").startup(function(use)
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-	}) -- enhanced lsp uis
+	})
+	use("ray-x/go.nvim")
+	use("ray-x/guihua.lua") -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use({
 		"VonHeikemen/lsp-zero.nvim",
